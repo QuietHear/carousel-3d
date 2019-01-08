@@ -1,0 +1,422 @@
+@charset "utf-8";
+//临时样式
+body {
+  background: black;
+}
+
+//轮播插件
+.bigCarousel {
+  width: 500px;
+  height: 232px;
+  margin: 0 auto;
+  position: relative;
+  //控制按钮
+  .controls {
+    height: 100%;
+    width: 15%;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 1s;
+    -moz-transition: opacity 1s; /* Firefox 4 */
+    -webkit-transition: opacity 1s; /* Safari and Chrome */
+    -o-transition: opacity 1s; /* Opera */
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    &.prv-btn {
+      left: -25%;
+    }
+    &.next-btn {
+      right: -25%;
+    }
+  }
+  //轮播区域
+  .list {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    list-style-type: none;
+    position: relative;
+    //通用设置
+    .item {
+      position: absolute;
+      width: 80%;
+      height: 80%;
+      top: 10%;
+      left: auto;
+      right: 0;
+      filter: progid:DXImageTransform.Microsoft.Shadow(color='#3fbee5', Direction=135, Strength=5); /*for ie6,7,8*/
+      -moz-box-shadow: 0 0 12px #3fbee5; /*firefox*/
+      -webkit-box-shadow: 0 0 12px #3fbee5; /*webkit*/
+      box-shadow: 0 0 12px #3fbee5; /*opera或ie9*/
+      //左移动--部分
+      @keyframes moveLeft {
+        from {
+          right: 28%;
+        }
+        to {
+          right: 36%;
+        }
+      }
+
+      @-moz-keyframes moveLeft { /* Firefox */
+        from {
+          right: 28%;
+        }
+        to {
+          right: 36%;
+        }
+      }
+
+      @-webkit-keyframes moveLeft { /* Safari 和 Chrome */
+        from {
+          right: 28%;
+        }
+        to {
+          right: 36%;
+        }
+      }
+
+      @-o-keyframes moveLeft { /* Opera */
+        from {
+          right: 28%;
+        }
+        to {
+          right: 36%;
+        }
+      }
+      //离开左边--全部
+      @keyframes leaveLeft {
+        from {
+          right: 36%;
+        }
+        to {
+          right: 28%;
+        }
+      }
+
+      @-moz-keyframes leaveLeft { /* Firefox */
+        from {
+          right: 36%;
+        }
+        to {
+          right: 28%;
+        }
+      }
+
+      @-webkit-keyframes leaveLeft { /* Safari 和 Chrome */
+        from {
+          right: 36%;
+        }
+        to {
+          right: 28%;
+        }
+      }
+
+      @-o-keyframes leaveLeft { /* Opera */
+        from {
+          right: 36%;
+        }
+        to {
+          right: 28%;
+        }
+      }
+      //右移动--部分
+      @keyframes moveRight {
+        from {
+          left: 28%;
+        }
+        to {
+          left: 36%;
+        }
+      }
+
+      @-moz-keyframes moveRight { /* Firefox */
+        from {
+          left: 28%;
+        }
+        to {
+          left: 36%;
+        }
+      }
+
+      @-webkit-keyframes moveRight { /* Safari 和 Chrome */
+        from {
+          left: 28%;
+        }
+        to {
+          left: 36%;
+        }
+      }
+
+      @-o-keyframes moveRight { /* Opera */
+        from {
+          left: 28%;
+        }
+        to {
+          left: 36%;
+        }
+      }
+      //离开右边--全部
+      @keyframes leaveRight {
+        from {
+          left: 36%;
+        }
+        to {
+          left: 28%;
+        }
+      }
+
+      @-moz-keyframes leaveRight { /* Firefox */
+        from {
+          left: 36%;
+        }
+        to {
+          left: 28%;
+        }
+      }
+
+      @-webkit-keyframes leaveRight { /* Safari 和 Chrome */
+        from {
+          left: 36%;
+        }
+        to {
+          left: 28%;
+        }
+      }
+
+      @-o-keyframes leaveRight { /* Opera */
+        from {
+          left: 36%;
+        }
+        to {
+          left: 28%;
+        }
+      }
+      //上边左移
+      @keyframes topLeft {
+        from {
+          right: -4%;
+        }
+        to {
+          right: 0;
+        }
+      }
+
+      @-moz-keyframes topLeft { /* Firefox */
+        from {
+          right: -4%;
+        }
+        to {
+          right: 0;
+        }
+      }
+
+      @-webkit-keyframes topLeft { /* Safari 和 Chrome */
+        from {
+          right: -4%;
+        }
+        to {
+          right: 0;
+        }
+      }
+
+      @-o-keyframes topLeft { /* Opera */
+        from {
+          right: -4%;
+        }
+        to {
+          right: 0;
+        }
+      }
+      //上面右移
+      @keyframes topRight {
+        from {
+          left: -4%;
+        }
+        to {
+          left: 0;
+        }
+      }
+
+      @-moz-keyframes topRight { /* Firefox */
+        from {
+          left: -4%;
+        }
+        to {
+          left: 0;
+        }
+      }
+
+      @-webkit-keyframes topRight { /* Safari 和 Chrome */
+        from {
+          left: -4%;
+        }
+        to {
+          left: 0;
+        }
+      }
+
+      @-o-keyframes topRight { /* Opera */
+        from {
+          left: -4%;
+        }
+        to {
+          left: 0;
+        }
+      }
+      //上面跳动
+      @keyframes topJump {
+        from {
+          transform: scale(0.8,0.95);
+        }
+        to {
+          transform: scale(1,1);
+        }
+      }
+
+      @-moz-keyframes topJump { /* Firefox */
+        from {
+          transform: scale(0.8,0.95);
+        }
+        to {
+          transform: scale(1,1);
+        }
+      }
+
+      @-webkit-keyframes topJump { /* Safari 和 Chrome */
+        from {
+          transform: scale(0.8,0.95);
+        }
+        to {
+          transform: scale(1,1);
+        }
+      }
+
+      @-o-keyframes topJump { /* Opera */
+        from {
+          transform: scale(0.8,0.95);
+        }
+        to {
+          transform: scale(1,1);
+        }
+      }
+      //列表项上的附加内容
+      a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        position: relative;
+        & > img {
+          width: 100%;
+          height: 100%;
+        }
+        .content {
+          display: none;
+          //广告1
+          .advertisingJF {
+            position: absolute;
+            width: 12%;
+            height: 30%;
+            top: 4%;
+            right: 2%;
+          }
+          //广告2
+          .advertisingTJ {
+            position: absolute;
+            width: 23%;
+            height: 35%;
+            top: 0;
+            left: 0;
+          }
+          //商品简介
+          & > span {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            height: 45px;
+            font-size: 1.5em;
+            line-height: 45px;
+            color: #fff;
+            overflow: hidden;
+            text-align: left;
+            .goodsName {
+              padding: 0 10px;
+            }
+            .goodsPrice {
+              color: #ede6b0;
+            }
+          }
+        }
+        //列表项上的模态框
+        .bigModel {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+          top: 0;
+          display: block;
+        }
+      }
+      //移动
+      &.moveLeft { //左移
+        right: 36%;
+        left: auto;
+      }
+      &.moveRight { //右移
+        left: 36%;
+      }
+      //每一项位置决定其内容
+      &.top {
+        z-index: 10;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        a {
+          .content {
+            display: block;
+          }
+          .bigModel {
+            display: none;
+          }
+        }
+      }
+      &.middle {
+        z-index: 5;
+      }
+      &.bottom {
+        z-index: 1;
+      }
+    }
+  }
+  //下边指示器
+  .indicator {
+    position: relative;
+    list-style-type: none;
+    padding-left: 0;
+    width: 140px;
+    height: 1.5%;
+    margin: 20px auto 0;
+    li {
+      background: rgba(255, 255, 255, 0.1);
+      width: 20px;
+      height: 100%;
+      position: absolute;
+      cursor: pointer;
+      &.active {
+        background: #3fbee5;
+      }
+    }
+  }
+  &:hover {
+    .controls {
+      opacity: 1;
+    }
+  }
+}
