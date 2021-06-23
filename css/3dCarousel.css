@@ -1,295 +1,459 @@
 @charset "UTF-8";
 body {
-  background: black; }
+  background: black;
+}
 
 .bigCarousel {
   width: 500px;
   height: 232px;
   margin: 0 auto;
-  position: relative; }
-  .bigCarousel .controls {
-    height: 100%;
-    width: 15%;
-    position: absolute;
-    top: 0;
-    z-index: 10;
-    cursor: pointer;
-    opacity: 0;
-    transition: opacity 1s;
-    -moz-transition: opacity 1s;
-    /* Firefox 4 */
-    -webkit-transition: opacity 1s;
-    /* Safari and Chrome */
-    -o-transition: opacity 1s;
-    /* Opera */ }
-    .bigCarousel .controls img {
-      width: 100%;
-      height: 100%; }
-    .bigCarousel .controls.prv-btn {
-      left: -25%; }
-    .bigCarousel .controls.next-btn {
-      right: -25%; }
-  .bigCarousel .list {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    list-style-type: none;
-    position: relative; }
-    .bigCarousel .list .item {
-      position: absolute;
-      width: 80%;
-      height: 80%;
-      top: 10%;
-      left: auto;
-      right: 0;
-      filter: progid:DXImageTransform.Microsoft.Shadow(color='#3fbee5', Direction=135, Strength=5);
-      /*for ie6,7,8*/
-      -moz-box-shadow: 0 0 12px #3fbee5;
-      /*firefox*/
-      -webkit-box-shadow: 0 0 12px #3fbee5;
-      /*webkit*/
-      box-shadow: 0 0 12px #3fbee5;
-      /*opera或ie9*/ }
+  position: relative;
+}
+
+.bigCarousel .controls {
+  height: 100%;
+  width: 15%;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  /* Firefox 4 */
+  -webkit-transition: opacity 1s;
+  /* Safari and Chrome */
+  -o-transition: opacity 1s;
+  /* Opera */
+}
+
+.bigCarousel .controls img {
+  width: 100%;
+  height: 100%;
+}
+
+.bigCarousel .controls.prv-btn {
+  left: -25%;
+}
+
+.bigCarousel .controls.next-btn {
+  right: -25%;
+}
+
+.bigCarousel .list {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  list-style-type: none;
+  position: relative;
+}
+
+.bigCarousel .list .item {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: auto;
+  right: 0;
+  filter: progid:DXImageTransform.Microsoft.Shadow(color='#3fbee5', Direction=135, Strength=5);
+  /*for ie6,7,8*/
+  -moz-box-shadow: 0 0 12px #3fbee5;
+  /*firefox*/
+  -webkit-box-shadow: 0 0 12px #3fbee5;
+  /*webkit*/
+  box-shadow: 0 0 12px #3fbee5;
+  /*opera或ie9*/
+}
+
 @keyframes moveLeft {
   from {
-    right: 28%; }
+    right: 28%;
+  }
   to {
-    right: 36%; } }
+    right: 36%;
+  }
+}
+
 @-moz-keyframes moveLeft {
   /* Firefox */
   from {
-    right: 28%; }
+    right: 28%;
+  }
   to {
-    right: 36%; } }
+    right: 36%;
+  }
+}
+
 @-webkit-keyframes moveLeft {
   /* Safari 和 Chrome */
   from {
-    right: 28%; }
+    right: 28%;
+  }
   to {
-    right: 36%; } }
+    right: 36%;
+  }
+}
+
 @-o-keyframes moveLeft {
   /* Opera */
   from {
-    right: 28%; }
+    right: 28%;
+  }
   to {
-    right: 36%; } }
+    right: 36%;
+  }
+}
+
 @keyframes leaveLeft {
   from {
-    right: 36%; }
+    right: 36%;
+  }
   to {
-    right: 28%; } }
+    right: 28%;
+  }
+}
+
 @-moz-keyframes leaveLeft {
   /* Firefox */
   from {
-    right: 36%; }
+    right: 36%;
+  }
   to {
-    right: 28%; } }
+    right: 28%;
+  }
+}
+
 @-webkit-keyframes leaveLeft {
   /* Safari 和 Chrome */
   from {
-    right: 36%; }
+    right: 36%;
+  }
   to {
-    right: 28%; } }
+    right: 28%;
+  }
+}
+
 @-o-keyframes leaveLeft {
   /* Opera */
   from {
-    right: 36%; }
+    right: 36%;
+  }
   to {
-    right: 28%; } }
+    right: 28%;
+  }
+}
+
 @keyframes moveRight {
   from {
-    left: 28%; }
+    left: 28%;
+  }
   to {
-    left: 36%; } }
+    left: 36%;
+  }
+}
+
 @-moz-keyframes moveRight {
   /* Firefox */
   from {
-    left: 28%; }
+    left: 28%;
+  }
   to {
-    left: 36%; } }
+    left: 36%;
+  }
+}
+
 @-webkit-keyframes moveRight {
   /* Safari 和 Chrome */
   from {
-    left: 28%; }
+    left: 28%;
+  }
   to {
-    left: 36%; } }
+    left: 36%;
+  }
+}
+
 @-o-keyframes moveRight {
   /* Opera */
   from {
-    left: 28%; }
+    left: 28%;
+  }
   to {
-    left: 36%; } }
+    left: 36%;
+  }
+}
+
 @keyframes leaveRight {
   from {
-    left: 36%; }
+    left: 36%;
+  }
   to {
-    left: 28%; } }
+    left: 28%;
+  }
+}
+
 @-moz-keyframes leaveRight {
   /* Firefox */
   from {
-    left: 36%; }
+    left: 36%;
+  }
   to {
-    left: 28%; } }
+    left: 28%;
+  }
+}
+
 @-webkit-keyframes leaveRight {
   /* Safari 和 Chrome */
   from {
-    left: 36%; }
+    left: 36%;
+  }
   to {
-    left: 28%; } }
+    left: 28%;
+  }
+}
+
 @-o-keyframes leaveRight {
   /* Opera */
   from {
-    left: 36%; }
+    left: 36%;
+  }
   to {
-    left: 28%; } }
+    left: 28%;
+  }
+}
+
 @keyframes topLeft {
   from {
-    right: -4%; }
+    right: -4%;
+  }
   to {
-    right: 0; } }
+    right: 0;
+  }
+}
+
 @-moz-keyframes topLeft {
   /* Firefox */
   from {
-    right: -4%; }
+    right: -4%;
+  }
   to {
-    right: 0; } }
+    right: 0;
+  }
+}
+
 @-webkit-keyframes topLeft {
   /* Safari 和 Chrome */
   from {
-    right: -4%; }
+    right: -4%;
+  }
   to {
-    right: 0; } }
+    right: 0;
+  }
+}
+
 @-o-keyframes topLeft {
   /* Opera */
   from {
-    right: -4%; }
+    right: -4%;
+  }
   to {
-    right: 0; } }
+    right: 0;
+  }
+}
+
 @keyframes topRight {
   from {
-    left: -4%; }
+    left: -4%;
+  }
   to {
-    left: 0; } }
+    left: 0;
+  }
+}
+
 @-moz-keyframes topRight {
   /* Firefox */
   from {
-    left: -4%; }
+    left: -4%;
+  }
   to {
-    left: 0; } }
+    left: 0;
+  }
+}
+
 @-webkit-keyframes topRight {
   /* Safari 和 Chrome */
   from {
-    left: -4%; }
+    left: -4%;
+  }
   to {
-    left: 0; } }
+    left: 0;
+  }
+}
+
 @-o-keyframes topRight {
   /* Opera */
   from {
-    left: -4%; }
+    left: -4%;
+  }
   to {
-    left: 0; } }
+    left: 0;
+  }
+}
+
 @keyframes topJump {
   from {
-    transform: scale(0.8, 0.95); }
+    transform: scale(0.8, 0.95);
+  }
   to {
-    transform: scale(1, 1); } }
+    transform: scale(1, 1);
+  }
+}
+
 @-moz-keyframes topJump {
   /* Firefox */
   from {
-    transform: scale(0.8, 0.95); }
+    transform: scale(0.8, 0.95);
+  }
   to {
-    transform: scale(1, 1); } }
+    transform: scale(1, 1);
+  }
+}
+
 @-webkit-keyframes topJump {
   /* Safari 和 Chrome */
   from {
-    transform: scale(0.8, 0.95); }
+    transform: scale(0.8, 0.95);
+  }
   to {
-    transform: scale(1, 1); } }
+    transform: scale(1, 1);
+  }
+}
+
 @-o-keyframes topJump {
   /* Opera */
   from {
-    transform: scale(0.8, 0.95); }
+    transform: scale(0.8, 0.95);
+  }
   to {
-    transform: scale(1, 1); } }
-      .bigCarousel .list .item a {
-        width: 100%;
-        height: 100%;
-        display: block;
-        position: relative; }
-        .bigCarousel .list .item a > img {
-          width: 100%;
-          height: 100%; }
-        .bigCarousel .list .item a .content {
-          display: none; }
-          .bigCarousel .list .item a .content .advertisingJF {
-            position: absolute;
-            width: 12%;
-            height: 30%;
-            top: 4%;
-            right: 2%; }
-          .bigCarousel .list .item a .content .advertisingTJ {
-            position: absolute;
-            width: 23%;
-            height: 35%;
-            top: 0;
-            left: 0; }
-          .bigCarousel .list .item a .content > span {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            height: 45px;
-            font-size: 1.5em;
-            line-height: 45px;
-            color: #fff;
-            overflow: hidden;
-            text-align: left; }
-            .bigCarousel .list .item a .content > span .goodsName {
-              padding: 0 10px; }
-            .bigCarousel .list .item a .content > span .goodsPrice {
-              color: #ede6b0; }
-        .bigCarousel .list .item a .bigModel {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          background: rgba(0, 0, 0, 0.5);
-          top: 0;
-          display: block; }
-      .bigCarousel .list .item.moveLeft {
-        right: 36%;
-        left: auto; }
-      .bigCarousel .list .item.moveRight {
-        left: 36%; }
-      .bigCarousel .list .item.top {
-        z-index: 10;
-        top: 0;
-        width: 100%;
-        height: 100%; }
-        .bigCarousel .list .item.top a .content {
-          display: block; }
-        .bigCarousel .list .item.top a .bigModel {
-          display: none; }
-      .bigCarousel .list .item.middle {
-        z-index: 5; }
-      .bigCarousel .list .item.bottom {
-        z-index: 1; }
-  .bigCarousel .indicator {
-    position: relative;
-    list-style-type: none;
-    padding-left: 0;
-    width: 140px;
-    height: 1.5%;
-    margin: 20px auto 0; }
-    .bigCarousel .indicator li {
-      background: rgba(255, 255, 255, 0.1);
-      width: 20px;
-      height: 100%;
-      position: absolute;
-      cursor: pointer; }
-      .bigCarousel .indicator li.active {
-        background: #3fbee5; }
-  .bigCarousel:hover .controls {
-    opacity: 1; }
+    transform: scale(1, 1);
+  }
+}
 
-/*# sourceMappingURL=3dCarousel.css.map */
+.bigCarousel .list .item a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+
+.bigCarousel .list .item a > img {
+  width: 100%;
+  height: 100%;
+}
+
+.bigCarousel .list .item a .content {
+  display: none;
+}
+
+.bigCarousel .list .item a .content .advertisingJF {
+  position: absolute;
+  width: 12%;
+  height: 30%;
+  top: 4%;
+  right: 2%;
+}
+
+.bigCarousel .list .item a .content .advertisingTJ {
+  position: absolute;
+  width: 23%;
+  height: 35%;
+  top: 0;
+  left: 0;
+}
+
+.bigCarousel .list .item a .content > span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  height: 45px;
+  font-size: 1.5em;
+  line-height: 45px;
+  color: #fff;
+  overflow: hidden;
+  text-align: left;
+}
+
+.bigCarousel .list .item a .content > span .goodsName {
+  padding: 0 10px;
+}
+
+.bigCarousel .list .item a .content > span .goodsPrice {
+  color: #ede6b0;
+}
+
+.bigCarousel .list .item a .bigModel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  display: block;
+}
+
+.bigCarousel .list .item.moveLeft {
+  right: 36%;
+  left: auto;
+}
+
+.bigCarousel .list .item.moveRight {
+  left: 36%;
+}
+
+.bigCarousel .list .item.top {
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bigCarousel .list .item.top a .content {
+  display: block;
+}
+
+.bigCarousel .list .item.top a .bigModel {
+  display: none;
+}
+
+.bigCarousel .list .item.middle {
+  z-index: 5;
+}
+
+.bigCarousel .list .item.bottom {
+  z-index: 1;
+}
+
+.bigCarousel .indicator {
+  position: relative;
+  list-style-type: none;
+  padding-left: 0;
+  width: 140px;
+  height: 1.5%;
+  margin: 20px auto 0;
+}
+
+.bigCarousel .indicator li {
+  background: rgba(255, 255, 255, 0.1);
+  width: 20px;
+  height: 100%;
+  position: absolute;
+  cursor: pointer;
+}
+
+.bigCarousel .indicator li.active {
+  background: #3fbee5;
+}
+
+.bigCarousel:hover .controls {
+  opacity: 1;
+}
